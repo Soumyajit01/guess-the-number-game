@@ -1,10 +1,10 @@
 import random
 
-num = random.randint(0,50)
-# print(num)
-print("Enter your guess between 0-50")
 
 def play():
+    num = random.randint(0,50)
+    print(num)
+    print("Enter your guess between 0-50")
     chances =0
     name = input("Enter your name: ")
     while (True):
@@ -29,11 +29,11 @@ def play():
                 print('You just broke the highscore!')
             break
 
-play() 
-print("Press 'p' to play again and 'q' to quit")
-replay = input().lower()
-if replay=='p':
-    play()
-elif replay=='q':
-    quit()
+while True:
+    print("Press 'p' to play again and 'q' to quit")
+    replay = input().lower()
+    if replay=='p':
+        play()
+    elif replay=='q':
+        break 
     
